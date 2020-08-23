@@ -71,10 +71,10 @@ app.get("/", (req,res)=>{
 
 
 //host
-app.listen(process.env.PORT, process.env.IP,  () =>{
-        console.log("yelcamp active");
-});
-    
+var port = process.env.PORT || 3000;
+app.listen(port, function () {
+  console.log("Server Has Started!");
+}); 
     
 // 
     
