@@ -1,0 +1,27 @@
+<!-- template pages can be easily added. -->
+<%- include('../partials/header') %>
+<div class="container">
+    <div class="row">
+<h1 style="text-align: center;">
+    Add new comments to <%= campground.name %>
+</h1>
+
+<div style="width: 30%; margin: 50px auto;">
+<form action="/campgrounds/<%= campground._id%>/comments" method ="post">
+  
+
+<div class="form-group">
+    <!-- <input class="form-control" type = 'text' name = 'comment' placeholder=" Description"> -->
+    <textarea name="comment[text]" id="comment" cols="47" rows="10">Please add your comment here</textarea>
+</div>
+    <div class="form-group">
+    <button class="btn btn-lg btn-block  btn-success">Submit</submit>
+    </div>
+    <a href="/campgrounds">Go back to campgrounds</a>
+
+
+</form>
+</div>
+</div>
+</div>
+<%- include('../partials/footer') %>
