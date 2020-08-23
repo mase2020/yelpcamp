@@ -23,7 +23,11 @@ var express = require("express"),
 
 app.use(bodyparser.urlencoded({extended: true}))
 // connect to the database
-mongoose.connect("mongodb://localhost/yelp_camp",{useNewUrlParser: true, useUnifiedTopology: true});
+mongoose.connect("mongodb+srv://mase2020:MongoAtlas@cluster0.x19df.mongodb.net/yelpcamp",{useNewUrlParser: true, useUnifiedTopology: true}).then(()=>{
+    console.log("connected to DB")
+}).catch(err=>{
+    console.log(err)
+})
 app.use(express.static(__dirname + "/public"));
 // seedDB();
 //by doing the following, '.ejs' does not need to be coded after it's filename.
@@ -72,7 +76,7 @@ app.listen(process.env.PORT, process.env.IP,  () =>{
 });
     
     
-    
+// 
     
 //this will add and save at the same time.
 // camp.create({
