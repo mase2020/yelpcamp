@@ -23,7 +23,7 @@ var express = require("express"),
 
 app.use(bodyparser.urlencoded({extended: true}))
 // connect to the database
-mongoose.connect("mongodb+srv://mase2020:MongoAtlas@cluster0.x19df.mongodb.net/yelpcamp",{useNewUrlParser: true, useUnifiedTopology: true}).then(()=>{
+mongoose.connect("mongodb+srv://mase2020:MongoAtlas@cluster0.x19df.mongodb.net/yelpcamp1",{useNewUrlParser: true, useUnifiedTopology: true}).then(()=>{
     console.log("connected to DB")
 }).catch(err=>{
     console.log(err)
